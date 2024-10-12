@@ -4,13 +4,17 @@ This project processes a list of events using Sidekiq for background job process
 
 ## Setup
 
-1. **Install Redis**: Sidekiq requires Redis to manage job queues. Ensure Redis is installed and running.
+1. **Clone git Repo.**:
+    ```bash
+    git@github.com:sajjadmurtaza/event_processor.git
 
-2. **Install Bundler**: If you haven't already, install Bundler:
+2. **Install Redis**: Sidekiq requires Redis to manage job queues. Ensure Redis is installed and running.
+
+3. **Install Bundler**: If you haven't already, install Bundler:
 
    ```bash
    gem install bundler
-3. **Install Dependencies**: Run Bundler to install the necessary gems:
+4. **Install Dependencies**: Run Bundler to install the necessary gems:
     ```bash
    bundle install
 ## Running the Project
