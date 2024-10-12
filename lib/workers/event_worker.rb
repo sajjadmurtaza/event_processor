@@ -7,6 +7,7 @@ require_relative '../event_processor'
 # EventWorker: To Processes events in the background
 class EventWorker
   include Sidekiq::Worker
+  sidekiq_options retry: 2, dead: true
 
   def perform(events)
     events = JSON.parse(events)

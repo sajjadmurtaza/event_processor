@@ -11,10 +11,6 @@ RSpec.describe Aggregator do
     }.to_json
   end
 
-  before do
-    allow(File).to receive(:read).with('results.json').and_return(file_content)
-  end
-
   it 'displays aggregated results' do
     expect { Aggregator.results }.to output(
       "Accounts with at least one reactivation: [\"B0001\", \"C001\"]\n" \
